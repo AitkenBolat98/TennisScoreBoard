@@ -39,6 +39,12 @@ public class Matches {
                     name = "player2_match_fk"
             ))
     private Players player2;
-
+    @ManyToOne()
+    @JoinColumn(name = "winner_id",
+                nullable = false,
+                referencedColumnName = "id",
+                foreignKey = @ForeignKey(
+                        name = "winner_match_fk"
+                ))
     private Players winner;
 }

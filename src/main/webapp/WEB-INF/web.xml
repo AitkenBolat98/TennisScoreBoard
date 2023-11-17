@@ -4,4 +4,12 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+    <servlet-name>servlets.NewMatch</servlet-name>
+    <servlet-class>servlets.NewMatch</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>servlets.NewMatch</servlet-name>
+    <url-pattern>/new-match</url-pattern>
+  </servlet-mapping>
 </web-app>

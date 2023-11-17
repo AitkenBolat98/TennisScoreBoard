@@ -12,7 +12,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Players {
+public class  Players {
 
     @Id
     @SequenceGenerator(name = "player_sequence",
