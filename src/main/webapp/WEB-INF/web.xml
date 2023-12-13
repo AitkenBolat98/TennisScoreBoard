@@ -6,6 +6,7 @@
   <display-name>Archetype Created Web Application</display-name>
   <servlet>
     <servlet-name>servlets.NewMatch</servlet-name>
+    <jsp-file>/new-match.jsp</jsp-file>
     <servlet-class>servlets.NewMatch</servlet-class>
   </servlet>
   <servlet-mapping>

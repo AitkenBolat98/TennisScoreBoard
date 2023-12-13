@@ -1,12 +1,19 @@
 package servlets;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+
 import java.io.IOException;
 
-@WebServlet(name = "NewMatch", value = "/new-match")
+import jakarta.servlet.*;
+import jakarta.servlet.http.*;
+import jakarta.servlet.annotation.*;
+import lombok.RequiredArgsConstructor;
+import service.PlayerService;
+import service.PlayerServiceImpl;
+
+@WebServlet(name = "servlets.NewMatch", value = "/new-match")
+@RequiredArgsConstructor
 public class NewMatch extends HttpServlet {
+    private  final PlayerService playerService;
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -14,6 +21,6 @@ public class NewMatch extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        playerService.createPlayers(request,response);
     }
 }
