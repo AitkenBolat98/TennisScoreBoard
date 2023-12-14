@@ -1,0 +1,22 @@
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate ConfigurationHibernate DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">org.h2.Driver</property>
+        <property name="connection.url">jdbc:h2:mem:tennis</property>
+        <property name="connection.username">aitken</property>
+        <property name="connection.password">3101</property>
+        <!-- Dialect for PostgreSQL -->
+        <property name="hibernate.dialect">org.hibernate.dialect.H2Dialect</property>
+
+        <!-- Other configurations... -->
+        <property name="current_session_context_class">thread</property>
+        <property name="hbm2ddl.auto">create</property>
+        <property name="show_sql">true</property>
+
+
+        <mapping class="module.Players"></mapping>
+        <mapping class="module.Matches"></mapping>
+    </session-factory>
+</hibernate-configuration>

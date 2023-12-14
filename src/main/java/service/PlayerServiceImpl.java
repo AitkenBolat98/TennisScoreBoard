@@ -4,7 +4,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.log4j.Log4j2;
 import module.Players;
-@Log4j2
 public class PlayerServiceImpl implements PlayerService {
     @Override
     public void createPlayers(HttpServletRequest request, HttpServletResponse response){
