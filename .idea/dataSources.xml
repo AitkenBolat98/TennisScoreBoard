@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="tennis" uuid="fe7d243f-253b-4268-a3d7-cb97c4266ba0">
-      <driver-ref>h2.unified</driver-ref>
+    <data-source source="LOCAL" name="TennisScoreBoard@localhost" uuid="4fccbced-7705-4447-9ef1-91e1d1999cc5">
+      <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>org.h2.Driver</jdbc-driver>
-      <jdbc-url>jdbc:h2:mem:tennis</jdbc-url>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5433/TennisScoreBoard</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

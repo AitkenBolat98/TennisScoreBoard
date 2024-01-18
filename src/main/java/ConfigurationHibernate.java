@@ -9,22 +9,19 @@ import org.hibernate.cfg.Configuration;
 import java.util.List;
 
 public class ConfigurationHibernate {
-    private static SessionFactory sessionFactory;
-
-    private ConfigurationHibernate(){}
 
     public static SessionFactory getSessionFactory(){
-        if(sessionFactory == null){
-        }try {
-            Configuration configuration = new Configuration().configure("hibernate.cfg.xml");
-            configuration.addAnnotatedClass(Players.class);
-            configuration.addAnnotatedClass(Matches.class);
-            StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties());
-            sessionFactory = configuration.buildSessionFactory(builder.build());
-        }catch (Exception e){
-            System.out.println("hiber exception" + e);
+
+        Configuration configuration = new Configuration();
+        configuration.addAnnotatedClass(Matches.class);
+        configuration.addAnnotatedClass(Players.class);
+        configuration.configure();
+        try {
+            SessionFactory sessionFactory = configuration.buildSessionFactory();
+            Session session = sessionFactory.openSession();
+            session.beginTransaction();
+            return session;
         }
-        return sessionFactory;
     }
 
 
