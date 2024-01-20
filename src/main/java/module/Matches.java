@@ -1,6 +1,6 @@
 package module;
 
-import jakarta.persistence.*;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,12 +15,12 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class Matches {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
     private Players player1;
-    @OneToOne
+    @OneToOne(fetch =  FetchType.LAZY)
     private Players player2;
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
     private Players winner;
 }
