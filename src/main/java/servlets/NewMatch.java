@@ -11,7 +11,7 @@ import lombok.RequiredArgsConstructor;
 import service.PlayerService;
 
 
-@WebServlet(name = "servlets.NewMatch", value = "/new-match")
+@WebServlet(name = "NewMatchServlet", value = "/new-match")
 @RequiredArgsConstructor
 public class NewMatch extends HttpServlet {
     private  final PlayerService playerService;
