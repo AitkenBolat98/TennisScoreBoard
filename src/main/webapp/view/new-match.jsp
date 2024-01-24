@@ -10,11 +10,11 @@
 <head>
     <meta charset="UTF-8">
     <title>New Match</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
     <h1>Player Registration</h1>
-    <form class="new-match" action="new-match" method="post" name="newmatchform">
+    <form action="/view/new-match" method="post" name="newmatchform">
         <div class="formcontainer">
             <div class="input-container">
                 <label for="player1"><strong>Player 1 name</strong></label>

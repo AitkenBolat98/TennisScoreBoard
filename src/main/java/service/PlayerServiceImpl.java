@@ -12,6 +12,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import service.Config;
 @RequiredArgsConstructor
+@Slf4j
 public class PlayerServiceImpl implements PlayerService {
     private final Config configuraiton;
     @Override
@@ -32,7 +33,8 @@ public class PlayerServiceImpl implements PlayerService {
             session.getTransaction().commit();
 
         }catch (Exception e){
-            System.out.println("Player creation exception");
+            log.error("exception occured",e);
+            throw e;
         }
     }
 }

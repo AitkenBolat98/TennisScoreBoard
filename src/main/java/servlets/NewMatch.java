@@ -8,16 +8,19 @@ import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import service.PlayerService;
 
 
-@WebServlet(name = "NewMatchServlet", value = "/new-match")
+@WebServlet(urlPatterns = "/new-match")
 @RequiredArgsConstructor
+@Slf4j
 public class NewMatch extends HttpServlet {
     private  final PlayerService playerService;
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/view/new-match.jsp");
+        dispatcher.forward(request,response);
     }
 
     @Override
